@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html data-ng-app="Vendor-Collaboration" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Vendor Collaboration Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<base href="/vc/" />
+
+	<link rel="stylesheet" href="resources/build/project.css"/>
+</head>
+
+<body data-ng-controller="mainController as app">
+	<div id="loading-indicator" data-ng-if="loading && !isRouteLoading">
+		<div class="middle">
+			<div class="inner">
+				<div>
+					<img src="resources/images/ajax-loader.gif" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper ng-cloak" data-ng-cloak="">
+	    <div class="inner-content">
+			<data-ng-include src="'modules/_app/templates/pageHeader.html'"></data-ng-include>
+			<route-loading-indicator data-ng-show="app.navbarLoaded"></route-loading-indicator>
+		    <main data-ng-show="!isRouteLoading" data-ng-view=""></main>
+			<div id="footer">
+				<p>&copy;{{currentYear}} Medline Industries, Inc. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+    <script src="resources/build/dist.js"></script>
+</body>
+</html>
