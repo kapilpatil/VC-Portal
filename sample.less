@@ -1,0 +1,108 @@
+
+
+/* Sample Read only file */
+/* Sample Read only file */
+
+
+
+@charset "UTF-8";
+
+@node_modules: "../../../../../../../node_modules/";
+
+// Third-party dependencies
+@import (inline) "@{node_modules}bootstrap/dist/css/bootstrap.min.css";
+@import (inline) "../../../css/jquery-ui-1.10.4.custom.css"; //TODO: Find a way to install this with NPM
+
+@import "medline.less";
+
+@import "nav.less";
+@import "accessDenied.less";
+@import "newUser.less";
+
+@import "../../admin/styles/editUser.less";
+@import "../../admin/styles/admin.less";
+@import "../../purchaseOrders/styles/purchaseOrders.less";
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+html {
+	font-family: 'Open Sans Regular', 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+}
+h1 {
+	margin: 0px;
+}
+p {
+	margin: 0px;
+}
+input {
+	border: none;
+	text-align: center;
+}
+body, h1, h2, h3, h4, h5, p {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+	background-color: rgb(235, 236, 236);
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+main {
+    padding: 15px 30px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 75px;
+    top: 125px;
+}
+.wrapper {
+	height: 100%;
+	margin: 0 auto;
+}
+table {
+	tr {
+		td.resultsMessage {
+			border-bottom: 0px;
+			text-align: center;
+		}
+		td {
+			border-bottom: 1px solid #EEEEEE;
+			font-size: 12px;
+			padding: 10px 4px;
+		}
+		td.checkbox-cell {
+			min-width: 20px;
+		}
+	}
+	td {
+		input[type="checkbox"] {
+			margin: -4px 0 0;
+		}
+		input.grouping-box {
+			display: inline-block;
+			margin-left: 40px;
+			margin-top: 10px;
+		}
+	}
+    tr{
+        a{
+            cursor: pointer;
+        }
+    }
+	tr.lineItem {
+		height: 55px;
+		min-height: 55px;
+		&:hover {
+			background: rgba(135, 210, 255, 0.15);
+		}
+	}
+
+......../
